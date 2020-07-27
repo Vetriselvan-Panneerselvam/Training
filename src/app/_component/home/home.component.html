@@ -1,0 +1,13 @@
+<div class="container-fluid" style="background-color: antiquewhite;min-height: 100%;">
+    <mat-tab-group>
+      <mat-tab label="TODO">
+          <h3>Click here to go TODO page</h3>
+          <button mat-raised-button>TODO</button>
+      </mat-tab>
+      <mat-tab label="Ecart">
+        <h3>Click here to go Product Dashboard</h3>
+        <button [routerLink]="['/product-dashboard']" mat-raised-button>Ecart</button>
+      </mat-tab>
+    </mat-tab-group>
+</div>
+<router-outlet></router-outlet>

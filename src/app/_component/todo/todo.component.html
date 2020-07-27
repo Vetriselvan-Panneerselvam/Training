@@ -1,0 +1,23 @@
+
+<div class="todoform">
+<mat-form-field class="w50">
+  <input  matInput placeholder="Enter TODO List" [(ngModel)]="toDo">
+  </mat-form-field>
+  <button mat-button (click)="addTodo()"><mat-icon>add</mat-icon></button>
+</div>
+
+<div *ngIf="showTodo.length > 0;  else noToDOlist" >
+  <div *ngFor="let todo of showTodo; let i = index;">
+    <mat-card class="todomatcard">
+      <mat-card-content>
+        {{todo}}
+      </mat-card-content>
+      <mat-card-actions class="toDolistactiion">
+        <button style="margin-top: 4px;" (click)="deleteTodo(i)" mat-icon-button ><mat-icon>close</mat-icon></button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+<ng-template #noToDOlist>
+    <p style="margin-left: 31%;">Please Enter Todo List</p>
+</ng-template>

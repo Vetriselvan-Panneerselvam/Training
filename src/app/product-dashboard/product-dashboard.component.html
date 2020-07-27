@@ -1,0 +1,23 @@
+<ng-container *ngIf='showList'>
+  <button mat-button style="margin-left: 90%;" (click)="openCart()">MyCart</button>
+</ng-container>
+
+<ng-container *ngIf='showCart' >
+  <button mat-raised-button style="margin-left: 90%;" (click)="openShop()" >Shop More..</button>
+</ng-container>
+
+
+<div class="dashboard">
+  <app-list-product *ngIf="showList">
+
+  </app-list-product>
+  <app-user-card *ngIf="showCart"
+  [cartitem]='cartList'
+  >
+  </app-user-card>
+</div>
+
+
+
+
+

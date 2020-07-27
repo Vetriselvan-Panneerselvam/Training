@@ -1,0 +1,28 @@
+
+<h2 class="addheading">ADD USER PRODUCT</h2>
+<form >
+  <mat-form-field class="matfield">
+    <mat-label>Product Name</mat-label>
+    <input matInput placeholder="Ex. Pizza" value="" [(ngModel)]="productName">
+  </mat-form-field>
+  <mat-form-field class="matfield">
+    <mat-label>Product Code </mat-label>
+    <input matInput placeholder="Ex. C665DC" value="" [(ngModel)]="productCode">
+  </mat-form-field>
+  <br>
+  <mat-form-field  class="matfield">
+    <mat-label>Category </mat-label>
+    <input matInput placeholder="Ex. Mobile" value="" [(ngModel)]="productCategory">
+  </mat-form-field>
+  <mat-form-field  class="matfield">
+    <mat-label>Price </mat-label>
+    <input matInput placeholder="Ex. 5,000" value="" [(ngModel)]="productPrice">
+  </mat-form-field>
+  <br>
+  <mat-form-field  class="matfield">
+    <mat-label>Special Description</mat-label>
+    <textarea matInput placeholder="Ex. Capacity,Processing..." [(ngModel)]="productDesc"></textarea>
+  </mat-form-field>
+  <br>
+  <button class="addbutton " mat-raised-button color="primary" >Add Product</button>
+</form>
